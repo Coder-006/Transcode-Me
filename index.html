@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transcoding Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Add Socket.IO client library -->
+    <script src="https://cdn.socket.io/4.5.0/socket.io.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Video Transcoder</h1>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+        <div class="container">
+            <div class="sidebar">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="main-content">
+                <!-- Upload Section -->
+                <div class="upload-section">
+                    <h2>Upload Your Video</h2>
+                    <div id="uploadArea" class="upload-area">
+                        <p>Drag and drop a video file here or <input type="file" id="fileInput"> to select from file
+                            explorer.</p>
+                    </div>
+                    <p id="statusMessage"></p>
+                    <div id="mediaList"></div>
+                </div>
+
+                <!-- Transcoding Section -->
+                <div class="transcoding-section">
+                    <label for="targetFormat">Select Transcoding Format:</label>
+                    <select id="targetFormat">
+                        <option value="mp4">MP4 (Video)</option>
+                        <option value="avi">AVI (Video)</option>
+                        <option value="mp3">MP3 (Audio)</option>
+                        <option value="wav">WAV (Audio)</option>
+                    </select>
+                    <button id="startTranscodingButton" disabled>Start Transcoding</button>
+                    <p id="statusMessage"></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Transcoding Website</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
