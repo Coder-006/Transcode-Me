@@ -7,7 +7,7 @@ from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
 # Allow CORS for all routes and SocketIO connections from localhost
-CORS(app, resources={r"/*": {"origins": "http://localhost"}})
+CORS(app, resources={r"/*": {"origins": ["http://localhost", "https://transcode-me.netlify.app"]}})
 
 # Initialize SocketIO
 socketio = SocketIO(app, cors_allowed_origins="http://localhost") # Enable Cross-Origin Resource Sharing
